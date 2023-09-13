@@ -1,0 +1,24 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#fullscreen-hero {
+    height: 100vh;
+    background: url('path-to-your-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#sticky-header {
+    position: sticky;
+    top: 0;
+    display: block; /* keep it displayed */
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+
+#scrolling-content {
+    padding: 20px;
+}

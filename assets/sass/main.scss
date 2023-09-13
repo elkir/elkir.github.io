@@ -1,0 +1,45 @@
+
+@import 'libs/vars';
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+@import 'libs/html-grid';
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic|Source+Sans+Pro:300,900");
+@import url('fontawesome-all.min.css');
+
+// Breakpoints.
+
+@include breakpoints((
+	xlarge:   ( 1281px,  1680px ),
+	large:    ( 981px,   1280px ),
+	medium:   ( 737px,   980px  ),
+	small:    ( 481px,   736px  ),
+	xsmall:   ( null,    480px  ),
+));
+
+@import 'reset'; // Reset styles
+@import 'landed'; // Landed specific styles
+@import 'aerial'; // Aerial specific styles
+
+
+/* For WebKit (Safari, Chrome) */
+body::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F0F0F0; // Light Gray Background
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #888888; // Dark Gray for the actual scrollbar
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #F0F0F0; 
+}
+
+/* For Firefox */
+body {
+    scrollbar-color: #888888 #F0F0F0; 
+    scrollbar-width: thin;
+}
