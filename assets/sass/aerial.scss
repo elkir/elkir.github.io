@@ -86,27 +86,36 @@
 
     /* Icon */
 
-        .icon {
-            @include icon;
-            position: relative;
-
-            > .label {
-                display: none;
-            }
-
-            &.solid {
-                &:before {
-                    font-weight: 900;
-                }
-            }
-
-            &.brands {
-                &:before {
-                    font-family: 'Font Awesome 5 Brands';
-                }
+    .icon {
+        @include icon;
+        position: relative;
+    
+        > .label {
+            display: none;
+        }
+    
+        > .email-text {
+            display: none;
+            margin-left: 5px; // Adjust the spacing between the icon and the email text.
+        }
+    
+        &:hover > .email-text {
+            display: inline;
+        }
+    
+        &.solid {
+            &:before {
+                font-weight: 900;
             }
         }
-
+    
+        &.brands {
+            &:before {
+                font-family: 'Font Awesome 5 Brands';
+            }
+        }
+    }
+    
     /* Wrapper */
 
         @include keyframes('wrapper') {

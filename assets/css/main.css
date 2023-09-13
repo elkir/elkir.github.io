@@ -3408,6 +3408,13 @@ body, input, select, textarea {
 .aerial .icon > .label {
   display: none;
 }
+.aerial .icon > .email-text {
+  display: none;
+  margin-left: 5px;
+}
+.aerial .icon:hover > .email-text {
+  display: inline;
+}
 .aerial .icon.solid:before {
   font-weight: 900;
 }
