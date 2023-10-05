@@ -6,7 +6,13 @@
 -->
 <html>
     <head>
-    	<!-- <base href="/~pd423/personal_webpage/"> -->
+		<script>
+			// Synchronous JavaScript to determine if we need the base tag
+			if (location.protocol !== 'file:') {
+				// Directly write the base tag into the document
+				document.write('<base href="/~pd423/personal_webpage/">');
+			}
+		</script>
 
         <title>PD Personal Page</title>
         <meta charset="utf-8" />
