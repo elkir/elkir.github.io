@@ -7,12 +7,19 @@
 <html>
     <head>
 		<script>
-			// Synchronous JavaScript to determine if we need the base tag
-			if (location.protocol !== 'file:') {
-				// Directly write the base tag into the document
-				document.write('<base href="/~pd423/personal_webpage/">');
+		// Determine if we are on the cl.cam.ac.uk path or GitHub Pages
+		if (location.protocol !== 'file:') {
+			if (location.hostname === 'www.cl.cam.ac.uk') {
+			// On cl.cam.ac.uk, use the existing base path
+			document.write('<base href="/~pd423/personal_webpage/">');
+			} else {
+			// On GitHub Pages or top-level site, use the root as the base
+			document.write('<base href="/">');
 			}
+		}
 		</script>
+
+
 
         <title>PD Personal Page</title>
         <meta charset="utf-8" />
